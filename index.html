@@ -14,6 +14,7 @@
         }
         header {
             background-color: #007BFF;
+            color: #fff;
             padding: 15px;
             text-align: center;
         }
@@ -21,12 +22,15 @@
             background-color: #333;
             color: #fff;
             padding: 10px;
+            text-align: center;
         }
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 10px;
-            margin-right: 15px;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         section {
             margin: 20px;
@@ -55,31 +59,45 @@
         #skills ul, #projects div, #contact ul, #learning-outcome ul {
             padding-left: 20px;
         }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Gurnoor Bagga</h1>
-        <p>Welcome to my vibrant personal website!</p>
+        <div class="container">
+            <h1>Gurnoor Bagga</h1>
+            <p>Welcome to my professional personal website!</p>
+        </div>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="#learning-outcome">Learning Outcome</a>
+        <div class="container">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#learning-outcome">Learning Outcome</a>
+        </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="container">
         <h2>About Me</h2>
-        <p>I'm Gurnoor Bagga, a student and coding enthusiast exploring the vast world of web development. Join me on this exciting journey as I learn, experiment, and share my experiences. Together, let's unlock the magic of coding!</p>
+        <p>I'm Gurnoor Bagga, a dedicated student and coding enthusiast exploring the vast world of web development. Join me on this exciting journey as I learn, experiment, and share my experiences. Together, let's unlock the magic of coding!</p>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="container">
         <h2>Skills and Interests</h2>
         <ul>
             <li>Python</li>
@@ -91,7 +109,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="container">
         <h2>Projects</h2>
         <div>
             <h3>Project 1: Responsive Personal Website</h3>
@@ -101,7 +119,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact Me</h2>
         <p>Feel free to reach out to me through the form below or find me on social media:</p>
         <!--Social Media Links-->
@@ -113,7 +131,7 @@
     </section>
 
     <!-- Learning Outcome Section -->
-    <section id="learning-outcome">
+    <section id="learning-outcome" class="container">
         <h2>What You'll Find Here</h2>
         <ul>
             <li>A glimpse into my coding journey as a beginner.</li>
@@ -121,6 +139,12 @@
             <li>Showcase your skills and projects in a tangible way.</li>
         </ul>
     </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 Gurnoor Bagga. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
