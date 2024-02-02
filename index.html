@@ -5,8 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurnoor Bagga - Personal Website</title>
     <style>
-        /* ... Your existing styles ... */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        section {
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #007BFF;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        #home {
+            text-align: center;
+        }
+        #skills ul, #projects div, #contact ul, #learning-outcome ul, #code-snippets div {
+            padding-left: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
 
+        /* CodeSnippet Showcase styles */
         #code-snippets {
             background-color: #fff;
             padding: 20px;
@@ -33,7 +97,73 @@
 </head>
 <body>
 
-    <!-- ... Your existing HTML ... -->
+    <header>
+        <div class="container">
+            <h1>Gurnoor Bagga</h1>
+            <p>Welcome to my professional personal website!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#learning-outcome">Learning Outcome</a>
+            <a href="#code-snippets">Code Snippets</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="container">
+        <h2>About Me</h2>
+        <p>I'm Gurnoor Bagga, a dedicated student and coding enthusiast exploring the vast world of web development. Join me on this exciting journey as I learn, experiment, and share my experiences. Together, let's unlock the magic of coding!</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+        <h2>Skills and Interests</h2>
+        <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Web Development</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div>
+            <h3>Project 1: Responsive Personal Website</h3>
+            <p>Explore my coding journey as a beginner. Learn, experiment, and share experiences in the vast world of web development. Together, let's unlock the magic of coding!</p>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me through the form below or find me on social media:</p>
+        <!--Social Media Links-->
+        <ul>
+            <li><a href="https://www.instagram.com/nsb_noor_singh_bagga?igsh=YzVkODRmOTdmMw%3D%3D&utm_source=qr" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/gurnoor-bagga-1a93a92a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:karan.work23@gmail.com">karan.work23@gmail.com</a></li>  
+        </ul>
+    </section>
+
+    <!-- Learning Outcome Section -->
+    <section id="learning-outcome" class="container">
+        <h2>What You'll Find Here</h2>
+        <ul>
+            <li>A glimpse into my coding journey as a beginner.</li>
+            <li>Gain a fundamental understanding of web development.</li>
+            <li>Showcase your skills and projects in a tangible way.</li>
+        </ul>
+    </section>
 
     <!-- CodeSnippet Showcase Section -->
     <section id="code-snippets" class="container">
@@ -67,9 +197,4 @@
         
         <!-- Add more snippets as needed -->
 
-    </section>
-
-    <!-- ... Your existing HTML ... -->
-
-</body>
-</html>
+   
