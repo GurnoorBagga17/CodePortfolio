@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurnoor Bagga - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Resetting some default styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
+
+        /* Header Styles */
         header {
             background-color: #007BFF;
             color: #fff;
             padding: 15px;
             text-align: center;
         }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* Navigation Styles */
         nav {
             background-color: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -31,7 +50,14 @@
             margin: 0 15px;
             font-weight: bold;
             text-transform: uppercase;
+            transition: color 0.3s ease;
         }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        /* Section Styles */
         section {
             margin: 20px;
             background-color: #fff;
@@ -39,38 +65,81 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
+
+        section h2, section h3 {
             color: #007BFF;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        #home {
-            text-align: center;
-        }
-        #skills ul, #projects div, #contact ul, #learning-outcome ul, #code-snippets div {
-            padding-left: 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
         }
 
-        /* CodeSnippet Showcase styles */
+        /* Home Section Styles */
+        #home p {
+            font-size: 1.2em;
+        }
+
+        /* Skills Section Styles */
+        #skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #skills li {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        /* Projects Section Styles */
+        #projects div {
+            margin-bottom: 20px;
+        }
+
+        #projects h3 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        #projects p {
+            font-size: 1.1em;
+        }
+
+        /* Contact Section Styles */
+        #contact ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #contact li {
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        #contact a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Learning Outcome Section Styles */
+        #learning-outcome ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1em;
+        }
+
+        #learning-outcome li {
+            margin-bottom: 10px;
+        }
+
+        /* CodeSnippet Showcase Styles */
         #code-snippets {
             background-color: #fff;
             padding: 20px;
@@ -81,6 +150,16 @@
 
         #code-snippets h2 {
             color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        #code-snippets div {
+            margin-bottom: 20px;
+        }
+
+        #code-snippets h3 {
+            color: #007BFF;
+            margin-bottom: 10px;
         }
 
         #code-snippets pre {
@@ -91,7 +170,47 @@
         }
 
         #code-snippets p {
+            font-size: 1.1em;
             margin-top: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            #skills ul {
+                flex-direction: column;
+            }
+
+            #skills li {
+                margin: 5px 0;
+            }
+
+            #contact ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #contact li {
+                margin: 10px 0;
+            }
+
+            #learning-outcome ul {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -99,8 +218,8 @@
 
     <header>
         <div class="container">
-            <h1>Gurnoor Bagga</h1>
-            <p>Welcome to my professional personal website!</p>
+            <h1 class="animate__animated animate__fadeInDown">Gurnoor Bagga</h1>
+            <p class="animate__animated animate__fadeIn">Welcome to my professional personal website!</p>
         </div>
     </header>
 
@@ -117,14 +236,14 @@
 
     <!-- Home Section -->
     <section id="home" class="container">
-        <h2>About Me</h2>
-        <p>I'm Gurnoor Bagga, a dedicated student and coding enthusiast exploring the vast world of web development. Join me on this exciting journey as I learn, experiment, and share my experiences. Together, let's unlock the magic of coding!</p>
+        <h2 class="animate__animated animate__fadeIn">About Me</h2>
+        <p class="animate__animated animate__fadeIn">I'm Gurnoor Bagga, a dedicated student and coding enthusiast exploring the vast world of web development. Join me on this exciting journey as I learn, experiment, and share my experiences. Together, let's unlock the magic of coding!</p>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="container">
-        <h2>Skills and Interests</h2>
-        <ul>
+        <h2 class="animate__animated animate__fadeIn">Skills and Interests</h2>
+        <ul class="animate__animated animate__fadeIn">
             <li>Python</li>
             <li>C++</li>
             <li>HTML, CSS, JavaScript</li>
@@ -134,67 +253,4 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div>
-            <h3>Project 1: Responsive Personal Website</h3>
-            <p>Explore my coding journey as a beginner. Learn, experiment, and share experiences in the vast world of web development. Together, let's unlock the magic of coding!</p>
-            <!-- Add more projects as needed -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me through the form below or find me on social media:</p>
-        <!--Social Media Links-->
-        <ul>
-            <li><a href="https://www.instagram.com/nsb_noor_singh_bagga?igsh=YzVkODRmOTdmMw%3D%3D&utm_source=qr" target="_blank">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/gurnoor-bagga-1a93a92a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a></li>
-            <li><a href="mailto:karan.work23@gmail.com">karan.work23@gmail.com</a></li>  
-        </ul>
-    </section>
-
-    <!-- Learning Outcome Section -->
-    <section id="learning-outcome" class="container">
-        <h2>What You'll Find Here</h2>
-        <ul>
-            <li>A glimpse into my coding journey as a beginner.</li>
-            <li>Gain a fundamental understanding of web development.</li>
-            <li>Showcase your skills and projects in a tangible way.</li>
-        </ul>
-    </section>
-
-    <!-- CodeSnippet Showcase Section -->
-    <section id="code-snippets" class="container">
-        <h2>CodeSnippet Showcase</h2>
-
-        <div>
-            <h3>Snippet 1: JavaScript Function</h3>
-            <pre>
-                <code class="language-javascript">
-                    // JavaScript code snippet
-                    function exampleFunction() {
-                        // Code logic
-                    }
-                </code>
-            </pre>
-            <p>This JavaScript function demonstrates [brief explanation].</p>
-        </div>
-
-        <div>
-            <h3>Snippet 2: Python Function</h3>
-            <pre>
-                <code class="language-python">
-                    # Python code snippet
-                    def example_function():
-                        # Code logic
-                        pass
-                </code>
-            </pre>
-            <p>This Python function showcases [brief explanation].</p>
-        </div>
-        
-        <!-- Add more snippets as needed -->
-
-   
+    <section id
